@@ -1,21 +1,22 @@
 # docker-smb-protected
 
-A simple SMB docker container for sharing data with authorized users.
+A simple SMB docker container for sharing data with authorized users. This branch is usage with Imagr and BSDPy. 
 
 Default username: ``admin``  
 Default password: ``letmein``  
 
 Usage:
 ----
-Assuming you want to share ``/usr/local/docker/data`` on your docker host:  
+Assuming you want to share ``/usr/local/docker/imagr`` and ``/usr/local/docker/nbi`` on your docker host:  
 
 ```bash
 docker run -d \
   --restart="always" \
   --name smb-protected \
-  -v /usr/local/docker/data:/repo \
+  -v /usr/local/docker/imagr:/imagr \
+  -v /usr/local/docker/nbi:/nbi \
   -p 445:445 \
-  clburlison/smb-protected
+  clburlison/smb-protected:imagr_bsdpy
 ```
 
 If you wish to change the admin password:  
