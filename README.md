@@ -1,6 +1,6 @@
 # docker-smb-protected
 
-A simple SMB docker container for sharing data with authorized users. This branch is usage with Imagr and BSDPy. 
+A simple SMB docker container for sharing data with authorized users. This branch is for usage with [Imagr](https://github.com/grahamgilbert/imagr) and [BSDPy](https://bitbucket.org/bruienne/bsdpy). 
 
 Default username: ``admin``  
 Default password: ``letmein``  
